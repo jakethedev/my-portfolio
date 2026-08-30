@@ -1,0 +1,610 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+}
+
+
+#minilogo{
+    margin-left: 10px;
+    width: 60px;
+    height: auto;
+}
+
+nav {
+    width: 100%;
+    min-height: 85px;
+
+    background-color: #FBFBFD;
+    border: 2px solid #e6ebef;
+
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 3;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: 400;
+
+    color: #111111;
+    text-decoration: none;
+
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+.navbar-brand:hover {
+    color: #111111;
+}
+
+
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 0 auto;
+}
+
+.nav-items {
+    color: #ACACAC !important;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    padding: 8px 0 !important;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.nav-items:hover {
+    color: #000000 !important;
+}
+
+
+
+
+#main_page {
+    position: relative;
+
+    width: 100%;
+    height: calc(100vh - 85px);
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    /* border: 2px solid #e4e7ea; */
+}
+
+#backgroundimg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+.portfolio-text {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    padding: 0 20px;
+
+    text-align: center;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.portfolio-text h1 {
+    margin: 0;
+    padding: 0;
+
+    color: #000000;
+
+    font-size: clamp(45px, 10vw, 140px);
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: clamp(2px, 0.7vw, 10px);
+
+    white-space: nowrap;
+}
+
+.portfolio-text p {
+    margin: 10px 0 0;
+    padding: 0;
+
+    color: #000000;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(30px, 5vw, 70px);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+
+#aboutmePage {
+    width: 100%;
+    min-height: calc(100vh - 85px);
+
+    margin: 0;
+    padding: 60px 20px;
+
+    background-image: url("PLAINBACKGROUND.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aboutme {
+    min-height: calc(100vh - 205px);
+}
+
+
+
+#profilepic { display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover; 
+    border: 8px solid rgba(255, 255, 255, 0.85);
+    border-radius: 20px; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; } 
+#profilepic:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.20); }
+
+
+
+
+.aboutMeText { margin: 0; 
+    padding: 30px 50px; 
+    color: #222222; 
+}
+
+.aboutMeText h2 { margin: 0 0 30px; 
+    text-align: center; 
+    font-size: clamp(2.2rem, 4vw, 4rem); 
+    font-weight: 800; 
+    letter-spacing: 2px; 
+    line-height: 1.2; 
+}
+
+.aboutMeText .intro { 
+    font-size: clamp(1.05rem, 1.4vw, 1.3rem); 
+    line-height: 1.8; 
+    margin-bottom: 30px; }
+
+.aboutMeText p { max-width: 680px; 
+    margin: 0 auto 22px; 
+    font-size: clamp(1rem, 1.3vw, 1.2rem); 
+    font-weight: 400; 
+    line-height: 1.75; 
+    letter-spacing: 0.2px; 
+    text-align: left; 
+}
+
+
+.aboutMeText p:last-child {
+    margin-bottom: 0;
+}
+
+
+.aboutMeText p strong { font-weight: 700; 
+    color: #111111; 
+}
+
+#QUIZZES{
+    text-align: center;
+}
+
+.quizPage {
+    width: 100%;
+    min-height: calc(100vh - 85px);
+
+    margin: 0;
+    padding: 60px 20px;
+
+    background-image: url("PLAINBACKGROUND.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.headers { 
+    margin: 0 0 25px; 
+    text-align: center; 
+    font-size: clamp(2.2rem, 4vw, 4rem); 
+    font-weight: 800; 
+    letter-spacing: 2px; 
+    line-height: 1.2; 
+}
+
+
+
+/* ==============================
+   PORTFOLIO CARDS
+============================== */
+
+.cards-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid;
+
+    /* Automatically adjusts when more cards are added */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 30px;
+
+    padding: 10px 20px 30px;
+}
+
+
+/* CARD */
+
+.portfolio-card {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* CARD HOVER */
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+
+/* CARD IMAGE */
+
+.card-image {
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+
+    background-color: #f1f1f1;
+}
+
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    /* object-fit: cover;
+    object-position: top; */
+
+    transition: transform 0.3s ease;
+}
+
+
+.portfolio-card:hover .card-image img {
+    transform: scale(1.04);
+}
+
+
+/* CARD CONTENT */
+
+.card-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 22px;
+}
+
+
+.card-content h5 {
+    margin: 0 0 10px;
+
+    color: #111111;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.card-content p {
+    margin: 0 0 20px;
+
+    color: #555555;
+
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+
+
+/* ==============================
+   TABLET / MOBILE
+============================== */
+
+@media (max-width: 991px) {
+
+    /* NAVBAR */
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .navbar-collapse {
+        margin-top: 10px;
+
+        background-color: #FBFBFD;
+
+        padding: 15px 25px;
+
+        text-align: left;
+    }
+
+    .navbar-nav {
+        width: 100%;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-items {
+        width: 100%;
+
+        text-align: left;
+    }
+
+
+    /* ABOUT ME */
+
+    #aboutmePage {
+        padding: 50px 20px;
+    }
+
+    .aboutme {
+        min-height: auto;
+    }
+
+
+    /* PROFILE IMAGE */
+
+    #profilepic {
+        width: 90%;
+        max-width: 500px;
+
+        margin: 0 auto 40px;
+    }
+
+
+    /* ABOUT ME TEXT */
+
+    .aboutMeText {
+        padding: 20px 40px;
+    }
+
+    .aboutMeText h2 {
+        margin-bottom: 30px;
+
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .aboutMeText p {
+        max-width: 650px;
+
+        font-size: 1.1rem;
+
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+
+        /* CARDS */
+
+    .cards-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+        padding: 10px 15px 30px;
+    }
+
+    .card-image {
+        height: 180px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+}
+
+
+/* ==============================
+   SMALL PHONES
+============================== */
+
+@media (max-width: 576px) {
+
+    /* NAVBAR */
+
+    nav {
+        min-height: 75px;
+
+        padding: 0 15px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+
+    /* HOME */
+
+    #main_page {
+        height: calc(100vh - 75px);
+    }
+
+    .portfolio-text {
+        padding: 0 15px;
+    }
+
+    .portfolio-text h1 {
+        font-size: clamp(35px, 13vw, 70px);
+
+        letter-spacing: 2px;
+    }
+
+    .portfolio-text p {
+        font-size: clamp(25px, 8vw, 45px);
+    }
+
+
+    /* ABOUT ME */
+
+    #aboutmePage {
+        padding: 40px 15px;
+    }
+
+
+    /* PROFILE IMAGE */
+
+    #profilepic {
+        width: 100%;
+        max-width: 400px;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* ABOUT ME TEXT */
+
+    .aboutMeText {
+        padding: 10px 15px;
+    }
+
+    .aboutMeText h2 {
+        margin-bottom: 25px;
+
+        font-size: 2.1rem;
+
+        letter-spacing: 1px;
+    }
+
+    .aboutMeText p {
+        margin-bottom: 20px;
+
+        font-size: 1rem;
+
+        line-height: 1.65;
+
+        text-align: center;
+    }
+
+        /* CARDS */
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        padding: 10px 5px 25px;
+    }
+
+    .portfolio-card {
+        border-radius: 15px;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .card-content {
+        padding: 18px;
+    }
+
+    .card-content h5 {
+        font-size: 1.2rem;
+    }
+
+    .card-content p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+}
+
+.footer {
+    padding: 20px 0;
+    margin-top: 50px;
+    background-color: #f8f9fa;
+    color: #666;
+    font-size: 17px;
+}
